@@ -93,4 +93,4 @@ export async function enterRoom(page, roomName = '팀 회의룸') {
   await openDocument(page);
 }
 
-export { TEST_HOST, BASE_URL, API_URL };
+export { TEST_HOST, PORT, FRONTEND_PORT, BASE_URL, API_URL };
