@@ -44,7 +44,7 @@ Standard HTTP endpoints for administrative and non-real-time tasks.
 ## 3. AI Media Pipeline Flow
 The flow of audio data from media source to AI-generated content.
 
-1.  **Ingest:** LiveKit SFU captures audio $\to$ Node.js server receives stream.
+1.  **Ingest:** mediasoup SFU captures audio $\to$ Node.js server receives stream.
 2.  **Stream:** Node.js $\to$ Deepgram (via WebSocket/Stream API).
 3.  **Diarization:** Deepgram returns text with `speaker_id` and `timestamp`.
 4.  **LLM Processing:** 

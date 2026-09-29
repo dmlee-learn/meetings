@@ -3,7 +3,7 @@
 ------------------------------
 ## 2. 핵심 기술 역량 가이드 (Core Technical Capabilities)## 👥 2.1. 고성능 실시간 미디어 파이프라인 제어 (WebRTC/SFU Skill)
 
-* 메모리 누수 방지: 화상채팅 룸이 종료되거나 유저가 비정상 종료(네트워크 단절 등)될 때, LiveKit SFU 서버와 Node.js 백엔드 간의 오디오 스트림 커넥션 및 미디어 트랙 리스너를 반드시 명시적으로 해제(destroy(), removeAllListeners())해야 합니다.
+* 메모리 누수 방지: 화상채팅 룸이 종료되거나 유저가 비정상 종료(네트워크 단절 등)될 때, mediasoup SFU 서버와 Node.js 백엔드 간의 오디오 스트림 커넥션 및 미디어 트랙 리스너를 반드시 명시적으로 해제(destroy(), removeAllListeners())해야 합니다.
 * 스트림 동기화: 화자 분리(Diarization) 정확도를 높이기 위해, 들어오는 오디오 데이터 파이프라인의 타임스탬프 왜곡을 방지하고 순서(Sequence)를 보장하는 버퍼링 로직을 구현해야 합니다.
 
 ## 🧱 2.2. 분산 동시성 제어 및 최적화 (CRDT/WebSocket Skill)

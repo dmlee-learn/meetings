@@ -7,7 +7,7 @@ We follow a pyramid testing approach: many unit tests, fewer integration tests, 
 * **Target:** Services, Models, and Plugin logic.
 * **Framework:** Jest or Vitest.
 * **Requirement:** 
-    * Mock all external dependencies (DB, AI APIs, LiveKit).
+    * Mock all external dependencies (DB, AI APIs, mediasoup).
     * Test edge cases (e.g., empty input, invalid block types).
     * Use `describe` and `it` blocks to clearly state the intent.
 
@@ -21,7 +21,7 @@ We follow a pyramid testing approach: many unit tests, fewer integration tests, 
 ### 1.3. End-to-End (E2E) Testing (Focus: Critical Paths)
 * **Target:** The complete user flow (e.g., "User joins room $\to$ Types text $\to$ AI generates summary").
 * **Framework:** Playwright or Cypress.
-* **Requirement:** Run in a containerized environment that includes a real LiveKit instance and Mock AI endpoints.
+* **Requirement:** Run in a containerized environment that includes a real mediasoup instance and Mock AI endpoints.
 
 ## 2. Quality Checklists
 
@@ -38,7 +38,7 @@ We follow a pyramid testing approach: many unit tests, fewer integration tests, 
 ### 2.3. Security & Performance Check
 * [ ] **XSS Check:** Are all `data` fields from plugins sanitized?
 * [ ] **DB Pressure Check:** Is the 3-5s debounce mechanism working during heavy typing?
-* [ ] **Memory Leak Check:** Are all event listeners (LiveKit, Sockets) destroyed on disconnect?
+* [ ] **Memory Leak Check:** Are all event listeners (mediasoup, Sockets) destroyed on disconnect?
 
 ## 3. Reporting
 * All test failures must include the failed input, the expected output, and the actual output.

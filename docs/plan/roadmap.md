@@ -111,7 +111,7 @@ This document is the central command for the development of the **Collaborative 
 | **T-008** | **AI Integration** | Auto-save summaries to Document | ✅ Done | P2 | 3 |
 | **T-009** | **In-Memory DB** | Test environment with `mongodb-memory-server` | ✅ Done | P3 | 1 |
 | **T-010** | **Yjs Server** | Real-time sync with `y-websocket` | ✅ Done | P1 | 5 |
-| **T-011** | **LiveKit Integration** | Real audio stream from SFU | ✅ Done | P2 | 6 |
+| **T-011** | **mediasoup Integration** | Real audio stream from SFU | ✅ Done | P2 | 6 |
 | **T-012** | **Real STT/LLM** | Connect to Deepgram/OpenAI | ✅ Done | P2 | 6 |
 | **T-013** | **File Export** | Real `.docx`, `.xlsx` generation | ✅ Done | P3 | 7 |
 | **T-014** | **JWT Auth** | Login, register, token verification | ✅ Done | P0 | 4 |
@@ -127,6 +127,13 @@ This document is the central command for the development of the **Collaborative 
 | **T-025** | **Full Doc Import (MD)** | Parse Markdown to reconstruct document | ✅ Done | P1 | 7 |
 | **T-026** | **Full Doc Export (Docx)** | Rich text export using docx library | 🔄 In Progress | P2 | 7 |
 | **T-027** | **Full Doc Export (Image)** | Canvas/Puppeteer based visual export | 🔄 In Progress | P2 | 7 |
+| **T-028** | **Room Password (PIN)** | 방 비밀번호(PIN) 보호 | ✅ Done | P1 | 4 |
+| **T-029** | **Sidebar Hover Expand** | 사이드바 hover 확장 UX (200px→280px) | ✅ Done | P2 | 8 |
+| **T-030** | **Block Copy (Excel/Word)** | 블록 복사: HTML 테이블/트리 변환 후 클립보드 | ✅ Done | P1 | 7 |
+| **T-031** | **Active Room Indicator** | 방 목록에서 참여 중인 방 시각화 (초록 테두리 + 배지) | ✅ Done | P2 | 8 |
+| **T-032** | **Mindmap HTML Export** | 마인드맵 → HTML 트리 변환 (`__ROOT__` 처리) | ✅ Done | P2 | 7 |
+| **T-033** | **E2E Test Suite** | Playwright E2E (login, sync) + `.env` 참조 | ✅ Done | P2 | QA |
+| **T-034** | **README & Docs** | README 작성, LiveKit→mediasoup 문서 통일 | ✅ Done | P3 | Docs |
 
 ---
 
@@ -141,4 +148,4 @@ This document is the central command for the development of the **Collaborative 
 - [ ] **AI Efficiency:** VAD (Voice Activity Detection) must be active to minimize API costs.
 
 ---
-*Last Updated: 2026-09-28*
+*Last Updated: 2026-09-29*

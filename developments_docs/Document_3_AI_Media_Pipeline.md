@@ -1,7 +1,7 @@
 # Document 3: Audio Streaming & AI Pipeline Flow Specification
 
 ## 1. Media Integration Architecture
-LiveKit SFU acts as the central router for audio/video packets. The Node.js application registers as a persistent headless ingest peer or reads the individual tracks using server-side egress hooks.
+mediasoup SFU acts as the central router for audio/video packets. The Node.js application registers as a persistent headless ingest peer or reads the individual tracks using server-side egress hooks.
 
 ## 2. Audio Processing Parameters
 * **Format:** Uncompressed PCM Linear / WebM Audio Stream

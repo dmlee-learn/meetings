@@ -11,7 +11,7 @@ export interface IAudioPacket {
 }
 
 /**
- * MediaIngestService는 SFU(LiveKit)에서 수신한 오디오 스트림을 관리합니다.
+ * MediaIngestService는 SFU(mediasoup)에서 수신한 오디오 스트림을 관리합니다.
  * 또한 VAD(Voice Activity Detection)를 수행하여 불필요한 API 호출을 줄여줍니다.
  */
 export class MediaIngestService extends EventEmitter {
