@@ -12,7 +12,7 @@
  * 3. 문서 1개 + 블록 3개 (텍스트, 마인드맵, 스프레드시트)
  */
 
-const API_URL = process.argv[2] || 'http://localhost:3000/api';
+const API_URL = process.argv[2] || `http://localhost:${process.env.PORT || '3000'}/api`;
 
 // ─── 유틸리티 ────────────────────────────────────────────────
 
