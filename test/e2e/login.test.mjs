@@ -4,7 +4,7 @@
  *
  * 실행: node test/e2e/login.test.mjs
  */
-import { loginAs } from '../helpers.mjs';
+import { loginAs, screenshot } from '../helpers.mjs';
 
 const email = 'alice@example.com';
 const { page, browser } = await loginAs(email);
@@ -29,6 +29,6 @@ if (userName > 0) {
   process.exitCode = 1;
 }
 
-await page.screenshot({ path: 'test/results/login.png' });
+await screenshot(page, 'login.png');
 await browser.close();
 console.log('=== 로그인 테스트 완료 ===');

@@ -5,7 +5,7 @@
  *
  * 실행: node test/e2e/sync.test.mjs
  */
-import { loginAs, enterRoom, setTextBlock } from '../helpers.mjs';
+import { loginAs, enterRoom, setTextBlock, screenshot } from '../helpers.mjs';
 
 console.log('=== Alice 로그인 ===');
 const A = await loginAs('alice@example.com');
@@ -61,8 +61,8 @@ if (aliceHasBob) {
   process.exitCode = 1;
 }
 
-await A.page.screenshot({ path: 'test/results/sync-alice.png' });
-await B.page.screenshot({ path: 'test/results/sync-bob.png' });
+await screenshot(A.page, 'sync-alice.png');
+await screenshot(B.page, 'sync-bob.png');
 await A.browser.close();
 await B.browser.close();
 console.log('\n=== 실시간 동기화 테스트 완료 ===');

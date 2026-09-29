@@ -24,6 +24,7 @@ Thumbs.db
 
 # Screenshot / debug images
 *.png
+test/screenshots/
 
 # Coverage
 coverage/

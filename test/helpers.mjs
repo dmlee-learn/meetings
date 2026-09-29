@@ -3,8 +3,17 @@
  * - 로그인, 방 선택, 문서 열기, 블록 포커싱 등 공통 동작을 재사용
  * - TEST_HOST, PORT, FRONTEND_PORT: .env에서 읽어옴
  */
-import { readFileSync } from 'fs';
+import { mkdirSync } from 'fs';
 import { join } from 'path';
+
+// 스크린샷 저장 폴더
+const SCREENSHOT_DIR = join(process.cwd(), 'test', 'screenshots');
+
+/** 스크린샷 저장 (test/screenshots/ 하위로) */
+export function screenshot(page, filename) {
+  mkdirSync(SCREENSHOT_DIR, { recursive: true });
+  return page.screenshot({ path: join(SCREENSHOT_DIR, filename) });
+}
 
 // ── .env에서 TEST_HOST 읽어오기 ──
 function loadEnv() {
