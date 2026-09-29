@@ -7,7 +7,6 @@ build/
 .next/
 
 # Environment
-.env
 .env.local
 .env.*.local
 
